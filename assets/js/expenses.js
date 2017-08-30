@@ -207,6 +207,7 @@ var TableActionModule = function(){
             }
             });
     }
+
     var handleDeleteRow = function(){
         $('#expenses-table').on('click', '.btn-delete-row', function(e) {
                 e.preventDefault();
