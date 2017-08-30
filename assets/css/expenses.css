@@ -1,0 +1,73 @@
+/**
+ * Created by Yumar Sotolongo Rivero on 28/8/2017.
+ */
+
+.table-toolbar {
+    margin-bottom: 15px;
+}
+#header .logo {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    max-width: 170px;
+    line-height: 40px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.slogan{
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.margin-bottom-15{
+    margin-bottom: 15px;
+}
+#expenses-table tr td input{
+    width: 100%;
+}
+#expenses-table tr th .filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#expenses-table tr th .filter i.fa-sort{
+    color: rgba(0, 0, 0, 0.2);
+}
+.edit-row{
+    border: 1px solid #ddd !important;
+}
+.alert-modal{
+    background: rgba(240, 173, 78, 0.81);
+    padding: 10px 15px;
+}
+.modal-footer {
+    padding: 10px 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.search-input{
+    max-width: 200px;
+}
+#newRow{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+#content{
+    padding: 10px;
+}
+#addRowBtn i, #expenses-table i {
+    padding: 0px;
+}
+
+
+/****MEDIA QUERIES****/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    #content{
+        padding: 0px;
+    }
+    .panel-body {
+        padding: 5px;
+    }
+}
