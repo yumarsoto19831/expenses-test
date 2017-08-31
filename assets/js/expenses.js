@@ -2,18 +2,38 @@
  * Created by Yumar Sotolongo Rivero on 28/8/2017.
  */
 
+
+
 jQuery(window).ready(function() {
     $.support.cors = true;
-
+    $(document).ajaxStart(function () {
+        $.blockUI({ message: '<img src="assets/images/ajax-load.gif" style="background-color:#fff"/>',
+            css: { backgroundColor: 'transparent', border:'none',
+                display: 'flex', "justify-content": 'center' }});
+    });
+    $(document).ajaxStop($.unblockUI);
     TableActionModule.init();
 
-
 });
+
+var UtilModule = function(){
+
+    var blockUI = function(){
+        $.blockUI({ message: '<img src="assets/images/ajax-load.gif" style="background-color:#fff"/>',
+            css: { backgroundColor: 'transparent', border:'none',
+                display: 'flex', "justify-content": 'center' }});
+    }
+
+    return {
+        blockUI: blockUI
+
+    }
+}
 
 var TableDefinition = function(){
 
     var rowTemplate = function(data){
-        return `<tr id="${data.id}">
+        return `<tr id="${data.id}" data-index="-1">
                 <td data-edit="editable">
                     <span>${data.description}</span>
                     <input hidden name="description" type="text" value="${data.description}" readonly="">
@@ -105,9 +125,9 @@ var TableActionModule = function(){
     var handleDeleteBtn = function(){
         $('#btn-confirm-delete').on('click', function(e){
             e.preventDefault();
+            $('#confirmationModal').modal('hide');
             ExpensesServices.deleteExpensive($(rowSelected).attr('id'), function(){
                 $(rowSelected).remove();
-                $('#confirmationModal').modal('hide');
                 _toastr("Successfully Deleted!!","top-right","success",false);
             });
         })
@@ -143,7 +163,7 @@ var TableActionModule = function(){
             var data = fillUpdateJsonData($rowSelected);
             ExpensesServices.createExpensive(data, function(data){
                 $rowSelected.remove();
-                $('#expenses-table').append(TableDefinition.createTableRow(data));
+                $('#expenses-table').prepend(TableDefinition.createTableRow(data));
                 $.bootstrapSortable({ applyLast: true });
                 _toastr("Successfully Updated!!","top-right","success",false);
             });

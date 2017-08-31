@@ -6,7 +6,6 @@
     margin-bottom: 15px;
 }
 #header .logo {
-    display: inline-block;
     height: 50px;
     width: 100%;
     max-width: 170px;
@@ -55,20 +54,23 @@
 #content{
     padding: 10px;
 }
-#addRowBtn i, #expenses-table i {
-    padding: 0px;
-}
-#middle{
-    margin-left: 0px;
-}
 
+#middle{
+    margin-left: 0;
+}
+#addRowBtn i, #expenses-table i {
+    padding-right: 2px;
+}
 /****MEDIA QUERIES****/
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 768px) {
     #content{
-        padding: 0px;
+        padding: 0;
     }
     .panel-body {
         padding: 5px;
+    }
+    #addRowBtn i, #expenses-table i {
+        padding: 0;
     }
 }

@@ -64,14 +64,6 @@
 			-->
 			<section id="middle">
 
-
-				<!-- page title -->
-				<header id="page-header">
-					<h1>Manage Expenses</h1>
-				</header>
-				<!-- /page title -->
-
-
 				<div id="content" >
 
                     <div id="panel-3" class="panel panel-default">
@@ -100,15 +92,15 @@
 							</div>
 
                         <div class="table-responsive ">
-                            <table id="expenses-table" class="table table-bordered table-vertical-middle nomargin sortable">
+                            <table id="expenses-table" class=" bootstrapTable table table-bordered table-vertical-middle nomargin sortable">
                                 <thead>
                                 <tr>
 
-									<th>Description</th>
-									<th>Amount</th>
-									<th class="">Date</th>
-									<th class="">Type</th>
-									<th data-defaultsort='disabled'>Actions</th>
+									<th >Description</th>
+									<th > <i class="fa fa-dollar"></i><span class="hidden-xs">Amount</span></th>
+									<th > <i class="fa fa-calendar"></i><span class="hidden-xs">Date</span></th>
+									<th >Type</th>
+									<th >Actions</th>
 
                                 </tr>
                                 </thead>
@@ -131,37 +123,7 @@
 
 		<!-- Modals -->
 
-        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
 
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <h4>Text in a modal</h4>
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-
-                        <h4>Popover in a modal</h4>
-                        <p>This <a href="#" data-toggle="popover" class="btn btn-default" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
-
-                        <h4>Tooltips in a modal</h4>
-                        <p><a href="#" data-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-toggle="tooltip" title="Tooltip">that link</a> should have tooltips on hover.</p>
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
         <div id="confirmationModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -183,20 +145,18 @@
         </div>
 		<!-- Modals -->
 
-	
 		<!-- JAVASCRIPT FILES -->
 		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
 		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/moment.js"></script>
 		<script type="text/javascript" src="assets/plugins/jquery.form.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery.blockui.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/bootstrap.datepicker/js/bootstrap-datepicker.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/toastr/toastr.js"></script>
 		<script type="text/javascript" src="assets/plugins/bootstrap.sortable/bootstrap-sortable.js"></script>
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/expenses.js"></script>
-
-
 
     </body>
 </html>
